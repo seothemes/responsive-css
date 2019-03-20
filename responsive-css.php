@@ -2,13 +2,16 @@
 /**
  * Responsive CSS.
  *
- * Plugin Name:       Responsive CSS
- * Plugin URI:        https://seothemes.com
- * Description:       Adds a Responsive CSS section to the Customizer which lets you add custom CSS for all screens
- * sizes, mobile only and desktop only. Version:           1.0.0 Author:            SEO Themes Author URI:
- * https://seothemes.com Text Domain:       responsive-css License:           GPL-2.0+ License URI:
- * http://www.gnu.org/licenses/gpl-2.0.txt Domain Path:       /languages GitHub Plugin URI:
- * https://github.com/<owner>/<repo>
+ * Plugin Name: Responsive CSS
+ * Plugin URI:  https://seothemes.com
+ * Description: Adds a Responsive CSS section to the Customizer.
+ * Version:     1.0.0
+ * Author:      SEO Themes
+ * Author URI:  https://seothemes.com
+ * Text Domain: responsive-css
+ * License:     GPL-2.0+
+ * License URI:  http://www.gnu.org/licenses/gpl-2.0.txt
+ * Domain Path: /languages
  *
  * @package   ResponsiveCSS
  * @author    SEO Themes <info@seothemes.com>
@@ -19,14 +22,14 @@
 
 add_action( 'plugins_loaded', 'responsive_css_textdomain' );
 /**
- * Description of expected behavior.
+ * Load plugin text domain.
  *
  * @since 1.0.0
  *
  * @return void
  */
 function responsive_css_textdomain() {
-//	load_plugin_textdomain( 'responsive-css', __DIR__ . '/languages' );
+	load_plugin_textdomain( 'responsive-css', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
 add_action( 'customize_register', 'responsive_css_settings', 10, 1 );
@@ -94,7 +97,7 @@ function responsive_css_settings( $wp_customize ) {
 add_action( 'wp_ajax_dynamic_css', 'responsive_css_dynamic_css' );
 add_action( 'wp_ajax_nopriv_dynamic_css', 'responsive_css_dynamic_css' );
 /**
- * Description of expected behavior.
+ * Load the dynamic CSS with ajax.
  *
  * @since 1.0.0
  *
@@ -169,7 +172,7 @@ function responsive_css_output() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns a media query string.
  *
  * @since 1.0.0
  *
