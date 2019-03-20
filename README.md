@@ -12,7 +12,7 @@ You can also change the breakpoint at which the mobile and desktop media queries
 
 ## Screenshot
 
-![See the plugin in action](docs/screenshot.png)
+![See the plugin in action](docs/image.png)
 
 ## FAQ
 
